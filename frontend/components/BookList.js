@@ -42,8 +42,6 @@ key={b._id}
 className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 border"
 >
 
-{/* TITLE */}
-
 <h3 className="font-bold text-lg text-gray-800 flex items-center gap-2">
 
 <BookOpen size={18} className="text-indigo-500"/>
@@ -53,16 +51,12 @@ className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition duration
 </h3>
 
 
-{/* AUTHOR */}
-
 <p className="text-gray-600 mt-1">
 
 Author: <span className="font-medium">{b.author}</span>
 
 </p>
 
-
-{/* STATUS BADGE */}
 
 <div className="mt-3">
 
@@ -91,8 +85,6 @@ ${b.status==="Want to Read"
 </div>
 
 
-{/* TAGS */}
-
 <div className="mt-3 flex flex-wrap gap-2">
 
 {b.tags?.map((t,i)=>(
@@ -110,8 +102,6 @@ className="text-xs bg-gray-200 px-2 py-1 rounded-full text-gray-700"
 
 </div>
 
-
-{/* ACTION BUTTONS */}
 
 <div className="flex justify-between items-center mt-5">
 
@@ -140,8 +130,6 @@ className="flex items-center gap-1 text-red-600 hover:text-red-800"
 
 </div>
 
-
-{/* STATUS QUICK BUTTONS */}
 
 <div className="flex gap-3 mt-4 border-t pt-3">
 

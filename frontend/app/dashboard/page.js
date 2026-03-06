@@ -66,7 +66,6 @@ return(
 📚 My Reading Dashboard
 </h1>
 
-{/* STATS */}
 
 <div className="grid md:grid-cols-3 gap-5 mb-8">
 
@@ -115,16 +114,12 @@ Completed
 </div>
 
 
-{/* BOOK FORM */}
-
 <BookForm
 add={add}
 update={update}
 editing={editing}
 />
 
-
-{/* FILTER */}
 
 <div className="mb-6">
 
@@ -141,9 +136,6 @@ className="border p-3 rounded-lg shadow text-gray-700"
 </select>
 
 </div>
-
-
-{/* BOOK LIST */}
 
 <BookList
 books={filteredBooks}

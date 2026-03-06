@@ -55,9 +55,6 @@ className="bg-white p-6 rounded-xl shadow-md mb-8 grid gap-4  transition hover:s
 
 </h2>
 
-
-{/* TITLE */}
-
 <div className="flex items-center border rounded-lg p-2 bg-gray-50 focus-within:ring-2 focus-within:ring-indigo-400">
 
 <Book className="text-gray-400 mr-2"/>
@@ -71,8 +68,6 @@ className="w-full p-2 outline-none text-gray-800 bg-transparent"
 
 </div>
 
-
-{/* AUTHOR */}
 
 <div className="flex items-center border rounded-lg p-2 bg-gray-50 focus-within:ring-2 focus-within:ring-indigo-400">
 
@@ -88,8 +83,6 @@ className="w-full p-2 outline-none text-gray-800 bg-transparent"
 </div>
 
 
-{/* TAGS */}
-
 <div className="flex items-center border rounded-lg p-2 bg-gray-50 focus-within:ring-2 focus-within:ring-indigo-400">
 
 <Tag className="text-gray-400 mr-2"/>
@@ -103,9 +96,6 @@ className="w-full p-2 outline-none text-gray-800 bg-transparent"
 
 </div>
 
-
-{/* STATUS */}
-
 <select
 value={status}
 onChange={(e)=>setStatus(e.target.value)}
@@ -117,9 +107,6 @@ className="border rounded-lg p-2 text-gray-700 focus:ring-2 focus:ring-indigo-40
 <option>Completed</option>
 
 </select>
-
-
-{/* BUTTON */}
 
 <button
 className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white p-3 rounded-lg font-medium hover:opacity-90 transition"

@@ -40,8 +40,6 @@ return(
 
 <div className="min-h-screen grid md:grid-cols-2 animate-fade">
 
-{/* LEFT LOGIN FORM */}
-
 <div className="flex items-center justify-center bg-gray-100">
 
 <form
@@ -52,9 +50,6 @@ className="bg-white shadow-xl rounded-xl p-8 w-96 animate-slide"
 <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
 Welcome Back
 </h2>
-
-{/* EMAIL */}
-
 <div className="flex items-center border rounded mb-4 px-3">
 
 <Mail className="text-gray-400"/>
@@ -68,8 +63,6 @@ className="w-full p-3 outline-none text-gray-800"
 />
 
 </div>
-
-{/* PASSWORD */}
 
 <div className="flex items-center border rounded mb-5 px-3">
 

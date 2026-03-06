@@ -1,7 +1,7 @@
 require("dotenv").config()
 
 const express = require("express")
-// const cors = require("cors")
+const cors = require("cors")   
 const connectDB = require("./config/db")
 
 const authRoutes = require("./routes/authRoutes")
@@ -9,8 +9,8 @@ const bookRoutes = require("./routes/bookRoutes")
 
 const app = express()
 
-
 connectDB()
+
 app.use(
   cors({
     origin: process.env.FRONTEND_URL,
@@ -21,17 +21,13 @@ app.use(
 
 app.use(express.json())
 
-
-
 app.use("/api/auth", authRoutes)
 app.use("/api/books", bookRoutes)
-
 
 app.get("/", (req, res) => {
   res.json({
     message: "Personal Book Manager API",
     status: "Running",
-    version: "1.0.0"
   })
 })
 

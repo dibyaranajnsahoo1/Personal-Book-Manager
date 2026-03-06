@@ -22,7 +22,11 @@ app.use("/api/books", bookRoutes)
 
 
 app.get("/", (req, res) => {
-  res.send("API Running 🚀")
+  res.json({
+    message: "Personal Book Manager API",
+    status: "Running",
+    version: "1.0.0"
+  })
 })
 
 const PORT = process.env.PORT || 5000

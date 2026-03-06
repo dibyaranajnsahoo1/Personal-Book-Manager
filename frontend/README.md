@@ -1,36 +1,304 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📚 Personal Book Manager
 
-## Getting Started
+A full-stack **Personal Book Manager** built using the **MERN Stack with Next.js**.
 
-First, run the development server:
+This application allows users to maintain their personal book collection, track reading progress, and organize books using tags and reading status.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+The goal of this project is to provide a **simple, clean and intuitive tool for readers** to manage their reading habits.
+
+---
+
+# 🚀 Features
+
+## 🔐 Authentication
+- User Registration
+- User Login
+- Password hashing using **bcrypt**
+- Secure authentication using **JWT**
+- Protected API routes
+
+---
+
+## 📖 Book Collection
+
+Users can:
+
+- Add books
+- Edit books
+- Delete books
+- Add tags
+- Track reading status
+
+### Book Status
+
+📖 Want to Read  
+📘 Reading  
+✅ Completed  
+
+---
+
+## 📊 Dashboard
+
+Dashboard provides:
+
+- Total number of books
+- Reading books count
+- Completed books count
+- Book list display
+- Status change buttons
+- Tag display
+
+---
+
+# 🛠 Tech Stack
+
+## Frontend
+- Next.js (App Router)
+- React
+- Tailwind CSS
+- Lucide React Icons
+
+## Backend
+- Node.js
+- Express.js
+
+## Database
+- MongoDB
+- Mongoose
+
+## Authentication
+- JWT (JSON Web Token)
+
+---
+
+# 📂 Project Structure
+
+```
+Personal-Book-Manager
+
+backend
+│
+├── config
+│   └── db.js
+│
+├── controllers
+│   ├── authController.js
+│   └── bookController.js
+│
+├── middleware
+│   └── authMiddleware.js
+│
+├── models
+│   ├── User.js
+│   └── Book.js
+│
+├── routes
+│   ├── authRoutes.js
+│   └── bookRoutes.js
+│
+├── server.js
+├── package.json
+└── .env
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```
+frontend
+│
+├── app
+│   ├── dashboard
+│   │   └── page.js
+│   │
+│   ├── login
+│   │   └── page.js
+│   │
+│   ├── register
+│   │   └── page.js
+│   │
+│   ├── layout.js
+│   └── globals.css
+│
+├── components
+│   ├── Navbar.js
+│   ├── BookForm.js
+│   └── BookList.js
+│
+├── lib
+│   └── api.js
+│
+└── package.json
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# ⚙️ Installation Guide
 
-## Learn More
+## 1️⃣ Clone the Repository
 
-To learn more about Next.js, take a look at the following resources:
+```
+git clone https://github.com/yourusername/personal-book-manager.git
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+cd personal-book-manager
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+# 🔧 Backend Setup
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+cd backend
+npm install
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Create environment file:
+
+```
+.env
+```
+
+Add:
+
+```
+PORT=5000
+MONGO_URI=mongodb://127.0.0.1:27017/bookmanager
+JWT_SECRET=your_super_secret_key
+```
+
+Run backend server:
+
+```
+npm start
+```
+
+Backend runs on:
+
+```
+http://localhost:5000
+```
+
+---
+
+# 🎨 Frontend Setup
+
+Open new terminal
+
+```
+cd frontend
+npm install
+npm run dev
+```
+
+Frontend runs on:
+
+```
+http://localhost:3000
+```
+
+---
+
+# 🧪 Example API Endpoints
+
+## Register
+
+```
+POST /api/auth/register
+```
+
+## Login
+
+```
+POST /api/auth/login
+```
+
+## Get Books
+
+```
+GET /api/books
+```
+
+## Add Book
+
+```
+POST /api/books
+```
+
+## Update Book
+
+```
+PUT /api/books/:id
+```
+
+## Delete Book
+
+```
+DELETE /api/books/:id
+```
+
+---
+
+# 🗄 Database Schema
+
+## User Model
+
+```
+{
+name: String,
+email: String,
+password: String
+}
+```
+
+---
+
+## Book Model
+
+```
+{
+title: String,
+author: String,
+tags: [String],
+status: String,
+user: ObjectId
+}
+```
+
+---
+
+# 🔐 Authentication Flow
+
+1. User registers account
+2. Password hashed with **bcrypt**
+3. User logs in
+4. Server generates **JWT token**
+5. Token stored in **localStorage**
+6. Token sent with API requests
+
+Example header:
+
+```
+Authorization: Bearer token
+```
+
+---
+
+# 🌟 Future Improvements
+
+Possible improvements:
+
+- Book search functionality
+- Book cover images
+- Reading progress tracker
+- Dark mode
+- Pagination
+- User profile page
+
+---
+
+# 📜 License
+
+This project is built for educational and assignment purposes.
+
+---
+
+# 👨‍💻 Author
+
+Dibya Ranjan

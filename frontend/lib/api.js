@@ -1,4 +1,4 @@
-const API = process.env.NEXT_PUBLIC_API_URL
+const API = "http://localhost:5000/api"
 
 export const registerUser = (data) =>
   fetch(`${API}/auth/register`, {
@@ -52,3 +52,5 @@ export const deleteBook = (id, token) =>
       Authorization: `Bearer ${token}`,
     },
   })
+
+  

@@ -1,5 +1,5 @@
 // const API = "http://localhost:5000/api"
-const API = "https://personal-book-manager-2.onrender.com//api"
+const API = "https://personal-book-manager-3.onrender.com/api"
 
 
 export const registerUser = (data) =>

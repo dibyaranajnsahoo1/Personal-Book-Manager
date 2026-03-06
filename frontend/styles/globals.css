@@ -1,0 +1,27 @@
+@keyframes fade {
+from { opacity:0 }
+to { opacity:1 }
+}
+
+@keyframes slide {
+from{
+transform:translateY(40px);
+opacity:0;
+}
+to{
+transform:translateY(0);
+opacity:1;
+}
+}
+
+.animate-fade{
+animation:fade .8s ease;
+}
+
+.animate-slide{
+animation:slide .7s ease;
+}
+
+body{
+color:#111827;
+}
